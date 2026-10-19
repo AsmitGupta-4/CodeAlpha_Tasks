@@ -6,9 +6,9 @@ import re
 
 try:
     import librosa
-    print("✅ Librosa library successfully import ho gayi hai!")
+    print("Librosa library successfully import ho gayi hai!")
 except ImportError as e:
-    print(f"❌ Librosa import nahi ho pa rahi hai! Error: {e}")
+    print(f"Librosa import nahi ho pa rahi hai! Error: {e}")
 
 # Exact Full Absolute Path
 DATA_PATH = r"C:\Users\Asus\OneDrive\Desktop\Emotion Recognition from Speech\dataset"
@@ -19,7 +19,7 @@ ravdess_mapping = {
     '05': 'angry', '06': 'fearful', '07': 'disgust', '08': 'surprised'
 }
 
-print("🔄 Features extraction shuru ho raha hai... Isme thoda time lag sakta hai.")
+print("Features extraction shuru ho raha hai... Isme thoda time lag sakta hai.")
 features = []
 labels = []
 file_count = 0
@@ -52,10 +52,10 @@ for root, dirs, files in os.walk(DATA_PATH):
                         labels.append(emotion_name)
                         success_count += 1
                     except Exception as e:
-                        print(f"⚠️ File load error ({file}): {e}")
+                        print(f"File load error ({file}): {e}")
 
-print(f"📊 Scan Complete! Folder mein total files mili: {file_count}")
-print(f"🎯 Successfully extracted features for: {success_count} files")
+print(f" Scan Complete! Folder mein total files mili: {file_count}")
+print(f" Successfully extracted features for: {success_count} files")
 
 if len(features) > 0:
     X = np.array(features)
@@ -66,6 +66,6 @@ if len(features) > 0:
     np.save(os.path.join(output_dir, 'X_data.npy'), X)
     np.save(os.path.join(output_dir, 'y_data.npy'), y)
     joblib.dump(emotion_list, os.path.join(output_dir, 'emotion_classes.pkl'))
-    print(f"✅ Preprocessing Done! Successfully processed {len(X)} samples.")
+    print(f" Preprocessing Done! Successfully processed {len(X)} samples.")
 else:
-    print("❌ Output abhi bhi zero hai. Check karein ki pip install sahi se hua ya nahi.")
+    print(" Output abhi bhi zero hai. Check karein ki pip install sahi se hua ya nahi.")
