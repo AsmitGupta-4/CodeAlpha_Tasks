@@ -21,9 +21,9 @@ def load_project_files():
 
 try:
     model, emotion_list = load_project_files()
-    st.success("✅ Model and configurations loaded successfully!")
+    st.success("Model and configurations loaded successfully!")
 except Exception as e:
-    st.error(f"❌ Files load karne mein dikkat aayi: {e}")
+    st.error(f"Files load karne mein dikkat aayi: {e}")
 
 # File Uploader GUI Element
 uploaded_file = st.file_uploader("Kripya ek .wav file choose karein...", type=["wav"])
@@ -33,7 +33,7 @@ if uploaded_file is not None:
     st.audio(uploaded_file, format='audio/wav')
     
     if st.button("🔮 Predict Emotion"):
-        with st.spinner("🧠 Model audio ko analyze kar raha hai... Please wait..."):
+        with st.spinner("Model audio ko analyze kar raha hai... Please wait..."):
             try:
                 # Temporary file save karna librosa ke load karne ke liye
                 temp_path = os.path.join(BASE_DIR, "temp_upload.wav")
@@ -74,14 +74,14 @@ if uploaded_file is not None:
                 }
                 
                 # Output ready karna
-                output_text = emoji_dict.get(clean_emotion, f"🎵 {clean_emotion}")
+                output_text = emoji_dict.get(clean_emotion, f" {clean_emotion}")
                 
                 # Web screen par display karna
                 st.markdown("---")
-                st.subheader("🎯 Prediction Result:")
+                st.subheader("Prediction Result:")
                 st.info(f"### {output_text}")
                 
             except Exception as e:
-                st.error(f"⚠️ Error during processing: {e}")
+                st.error(f"Error during processing: {e}")
                
                 # python -m streamlit run app.py
