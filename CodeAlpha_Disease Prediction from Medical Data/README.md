@@ -1,4 +1,4 @@
-# CodeAlpha_Disease Prediction from Medical Data 🏥🧬
+# CodeAlpha_Disease Prediction from Medical Data 
 
 ## 📌 Project Overview
 This repository features a **Disease Prediction System** developed as part of the CodeAlpha internship. The core focus of this project is to implement predictive health analytics by leveraging historical medical records, patient symptoms, and physiological parameters. The machine learning pipeline accurately classifies and forecasts potential health conditions, acting as a supportive decision-making utility for diagnostic screening.
@@ -7,7 +7,7 @@ An elegant, user-friendly interface has been structured using **Streamlit** to e
 
 ---
 
-## 🚀 Key Features
+##  Key Features
 - **Clinical Data Wrangling:** Complete data processing pipeline featuring missing value imputation, skewness reduction, and feature scaling.
 - **Predictive ML Modeling:** Implements robust supervised learning models optimized for disease hazard classification.
 - **Instant Risk Analysis:** Evaluates composite health metrics instantly to yield structured diagnostic warnings.
@@ -15,7 +15,7 @@ An elegant, user-friendly interface has been structured using **Streamlit** to e
 
 ---
 
-## 🛠️ Technologies & Libraries Used
+##  Technologies & Libraries Used
 - **Programming Language:** Python 3.13
 - **Web UI & Framework:** Streamlit
 - **Core Data Science & ML:** Scikit-learn, Pandas, NumPy
@@ -33,7 +33,7 @@ An elegant, user-friendly interface has been structured using **Streamlit** to e
 
 ---
 
-## 💻 How to Run the Project Locally
+##  How to Run the Project Locally
 
 ### 1. Prerequisites
 Install the required infrastructure packages using your terminal environment:
