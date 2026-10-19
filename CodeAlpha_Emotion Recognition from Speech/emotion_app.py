@@ -54,6 +54,6 @@ if os.path.exists('speech_emotion_model.h5'):
                 
                 # Display Results beautifully
                 st.success(f"### Detected Emotion: **{final_emotion.upper()}**")
-                st.info(f"💡 Confidence Level: {confidence:.2f}%")
+                st.info(f" Confidence Level: {confidence:.2f}%")
 else:
-    st.warning("⚠️ Model file not found. Please run 'train_emotion_model.py' first to train the model!")
+    st.warning(" Model file not found. Please run 'train_emotion_model.py' first to train the model!")
