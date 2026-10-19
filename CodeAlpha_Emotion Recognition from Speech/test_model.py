@@ -5,9 +5,9 @@ import re
 
 try:
     import librosa
-    print("✅ Librosa loaded successfully!")
+    print(" Librosa loaded successfully!")
 except ImportError:
-    print("❌ Librosa missing!")
+    print(" Librosa missing!")
 
 # Base Directory Setup
 BASE_DIR = r"C:\Users\Asus\OneDrive\Desktop\Emotion Recognition from Speech"
@@ -15,7 +15,7 @@ BASE_DIR = r"C:\Users\Asus\OneDrive\Desktop\Emotion Recognition from Speech"
 def predict_emotion(audio_path):
     # 1. Check if file exists
     if not os.path.exists(audio_path):
-        return "❌ File nahi mili! Kripya sahi path check karein."
+        return " File nahi mili! Kripya sahi path check karein."
     
     try:
         # 2. Model, classes aur features configuration load karna
@@ -38,17 +38,17 @@ def predict_emotion(audio_path):
         if len(parts) >= 3 and parts[2] in ravdess_mapping:
             actual_emotion = ravdess_mapping[parts[2]]
 
-        print(f"\n📁 File Name: {os.path.basename(audio_path)}")
-        print(f"🎯 Actual Emotion (Dataset ke mutabik): {actual_emotion.upper()}")
-        print(f"🧠 Predicted Emotion (Model ka jawab): {predicted_emotion.upper()}")
+        print(f"\n File Name: {os.path.basename(audio_path)}")
+        print(f" Actual Emotion (Dataset ke mutabik): {actual_emotion.upper()}")
+        print(f" Predicted Emotion (Model ka jawab): {predicted_emotion.upper()}")
         
         if actual_emotion == predicted_emotion:
-            print("🎉 Waah! Model ne ekdum sahi pehchana!")
+            print(" Waah! Model ne ekdum sahi pehchana!")
         else:
-            print("😅 Model thoda sa chuk gaya, par koshish achhi thi!")
+            print(" Model thoda sa chuk gaya, par koshish achhi thi!")
             
     except Exception as e:
-        return f"❌ Error aaya prediction ke waqt: {e}"
+        return f" Error aaya prediction ke waqt: {e}"
 
 # --- YAHAN APNI KOI BHI FILE TEST KAREIN ---
 # Aap dataset ke andar se kisi bhi file ka path de kar test kar sakte hain
