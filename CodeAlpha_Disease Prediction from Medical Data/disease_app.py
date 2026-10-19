@@ -31,7 +31,7 @@ if st.button("Predict Disease Risk"):
     prob = model.predict_proba(scaled_features)
 
     if prediction[0] == 1:
-        st.error(f"⚠️ High Risk of Diabetes (Confidence: {prob[0][1]*100:.2f}%)")
+        st.error(f"High Risk of Diabetes (Confidence: {prob[0][1]*100:.2f}%)")
     else:
-        st.success(f"✅ Low Risk (Confidence: {prob[0][0]*100:.2f}%)")
+        st.success(f"Low Risk (Confidence: {prob[0][0]*100:.2f}%)")
     # python -m streamlit run disease_app.py
