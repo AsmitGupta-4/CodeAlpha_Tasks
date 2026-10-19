@@ -1,4 +1,4 @@
-# CodeAlpha_Emotion Recognition from Speech 🎙️🎭
+# CodeAlpha_Emotion Recognition from Speech 
 
 ## 📌 Project Overview
 This project is a **Speech Emotion Recognition (SER)** system developed during the CodeAlpha internship. The system analysis human speech/audio files (`.wav` format) to detect and classify underlying emotions such as Happy, Sad, Angry, Neutral, Calm, and Fearful. 
@@ -7,7 +7,7 @@ It leverages advanced digital signal processing techniques for feature extractio
 
 ---
 
-## 🚀 Key Features
+##  Key Features
 - **Audio Feature Extraction:** Uses the `librosa` library to extract Mel-Frequency Cepstral Coefficients (MFCCs) from raw audio signals.
 - **Feature Processing:** Normalizes and shapes audio arrays to match machine learning model configurations.
 - **Real-Time Classification:** Features a pre-trained optimized model capable of delivering instantaneous classification outputs.
@@ -15,7 +15,7 @@ It leverages advanced digital signal processing techniques for feature extractio
 
 ---
 
-## 🛠️ Technologies & Libraries Used
+##  Technologies & Libraries Used
 - **Programming Language:** Python 3.13
 - **Audio Processing:** Librosa
 - **Web Framework / GUI:** Streamlit
@@ -34,7 +34,7 @@ It leverages advanced digital signal processing techniques for feature extractio
 
 ---
 
-## 💻 How to Run the Project Locally
+##  How to Run the Project Locally
 
 ### 1. Prerequisites
 Ensure you have Python installed, then set up the environment using your terminal:
