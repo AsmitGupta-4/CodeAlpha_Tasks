@@ -33,9 +33,9 @@ rf_model.fit(X_train, y_train)
 
 # 6. Accuracy Check
 y_pred = rf_model.predict(X_test)
-print(f"✅ Random Forest Accuracy: {accuracy_score(y_test, y_pred)*100:.2f}%")
+print(f" Random Forest Accuracy: {accuracy_score(y_test, y_pred)*100:.2f}%")
 
 # 7. Final Saving
 joblib.dump(rf_model, 'disease_model.pkl')
 joblib.dump(scaler, 'disease_scaler.pkl')
-print("💾 Model and Scaler saved as .pkl files!")
+print(" Model and Scaler saved as .pkl files!")
